@@ -1,0 +1,31 @@
+Industry,Website,Performance,Accessibility,Best Practices,SEO,LCP (s),LCP Status,CLS,CLS Status,FCP (s),Speed Index (s),TBT (ms)
+HVAC,airmaxx.com,81,97,96,100,4.0,Poor,0.00,Good,2.2,2.5,202
+HVAC,guthrieandsons.com,72,87,100,100,6.7,Poor,0.04,Good,1.9,3.8,141
+HVAC,fryehvac.com,58,94,96,92,6.9,Poor,0.00,Good,4.3,4.3,354
+HVAC,northcountyac.com,54,91,100,92,4.7,Poor,0.30,Poor,3.3,8.1,16
+HVAC,hvacexpertssd.com,52,78,100,100,9.6,Poor,0.02,Good,6.9,8.1,265
+HVAC,atlascoolingandheating.com,52,85,69,83,4.4,Poor,0.00,Good,2.5,9.6,904
+HVAC,southcoastkoolsyou.com,46,87,73,85,19.8,Poor,0.00,Good,3.5,8.8,550
+HVAC,topcoolingguys.com,44,97,73,100,7.5,Poor,0.00,Good,3.2,7.1,833
+HVAC,sandiegoaircomfort.com,41,95,100,100,6.1,Poor,0.36,Poor,3.0,8.4,300
+Roofing,jakencoroofs.com,86,89,100,100,4.0,Needs Improvement,0.00,Good,2.0,2.0,18
+Roofing,gen819.com,70,65,100,69,5.7,Poor,0.04,Good,3.9,3.9,0
+Roofing,alfredos-roofing.com,68,88,100,85,7.9,Poor,0.01,Good,3.4,3.6,58
+Roofing,diamondroofingsd.com,58,87,100,92,14.5,Poor,0.00,Good,3.5,13.3,81
+Roofing,bobpivaroofing.com,57,93,100,100,4.4,Poor,0.02,Good,3.0,4.8,802
+Roofing,619roofing.com,56,86,100,100,19.2,Poor,0.00,Good,3.5,7.9,237
+Roofing,sandiegoroofing.com,33,77,96,92,17.6,Poor,0.00,Good,3.6,8.3,1674
+Plumbing,californiaplumbingsd.com,82,100,100,100,4.2,Poor,0.00,Good,1.7,5.2,0
+Plumbing,coastalplumbinginc.com,73,88,100,85,5.3,Poor,0.00,Good,3.4,3.4,3
+Plumbing,proactiveplumbinginc.com,55,92,96,100,8.4,Poor,0.22,Needs Improvement,1.4,4.8,295
+Plumbing,san-diego-plumbing.com,52,88,92,100,16.2,Poor,0.00,Good,10.6,10.6,200
+Plumbing,jpplumbers.com,46,86,73,100,15.3,Poor,0.03,Good,5.6,6.8,504
+Plumbing,almcoplumbing.com,41,91,92,100,19.0,Poor,0.00,Good,11.0,11.0,594
+Plumbing,castilloworksinc.com,30,83,96,92,26.4,Poor,0.04,Good,12.1,12.1,1426
+Painting,procoatpaintingsandiego.com,64,89,100,92,8.9,Poor,0.01,Good,3.2,6.0,0
+Painting,jcepainting.com,64,93,100,92,5.8,Poor,0.00,Good,5.2,5.8,0
+Painting,chismbrothers.com,38,88,73,85,5.6,Poor,0.17,Needs Improvement,3.2,6.2,989
+Electrical,kentelectricalsandiego.com,45,86,100,100,23.0,Poor,0.00,Good,8.7,8.7,470
+Electrical,ansonelectricsd.com,44,85,92,83,10.2,Poor,0.38,Poor,1.2,9.3,212
+Electrical,landerselectric.net,33,93,77,100,22.0,Poor,0.00,Good,14.8,14.8,1024
+Remodel,remodelworks.com,—,—,—,—,—,—,—,—,—,—,Timed out
