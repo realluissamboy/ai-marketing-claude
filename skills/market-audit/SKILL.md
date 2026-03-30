@@ -26,6 +26,8 @@ Before subagent analysis, **run the PageSpeed CLI** against the same URL(s) you 
 export PAGESPEED_API_KEY="your-google-api-key"   # recommended — enable PageSpeed Insights API in GCP
 python3 scripts/pagespeed_score.py "<url>" mobile
 python3 scripts/pagespeed_score.py "<url>" desktop
+# Optional: several URLs in one run (same strategy; put mobile|desktop last if not default mobile):
+python3 scripts/pagespeed_score.py "<url1>" "<url2>" "<url3>" desktop
 ```
 
 **Incorporate into the audit:**

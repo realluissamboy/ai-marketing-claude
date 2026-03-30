@@ -65,9 +65,11 @@ pip install reportlab
 export PAGESPEED_API_KEY="your-api-key-here"
 python3 scripts/pagespeed_score.py https://example.com mobile
 python3 scripts/pagespeed_score.py https://example.com desktop
+# Multiple URLs share the same strategy (default mobile; or put mobile|desktop last):
+python3 scripts/pagespeed_score.py https://a.com https://b.com desktop
 ```
 
-The CLI prints JSON with `scores` (performance, accessibility, best-practices, seo), `core_web_vitals`, `supporting_metrics`, `opportunities`, and optional CrUX `field_data`. On failure, an `error` object is included instead.
+The CLI prints JSON with `scores` (performance, accessibility, best-practices, seo), `core_web_vitals`, `supporting_metrics`, `opportunities`, and optional CrUX `field_data`. On failure, an `error` object is included instead. For **multiple URLs**, output is `{"strategy", "url_count", "results": [ ... ]}` where each item matches the single-URL shape.
 
 ---
 
