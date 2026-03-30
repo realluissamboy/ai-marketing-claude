@@ -50,6 +50,8 @@ Classify the business into one of these categories. This classification shapes e
 | **Creator/Course** | Lead magnets, email capture, course listings, community links | Email capture rate, funnel design, testimonials, content quality |
 | **Marketplace** | Two-sided messaging, buyer/seller flows, listing pages | Supply/demand balance, trust mechanisms, network effects |
 
+> **Revisit later (roadmap):** Today, business type here is heuristic (page signals interpreted by the auditor). A future enhancement should **derive structured “local intent” from on-site data** — e.g. JSON-LD / `LocalBusiness` (and related schema) — and **compare it to Google Business Profile** (NAP, categories, hours, service area) to flag mismatches and strengthen Local Business audits. Track this in issues/PRs on GitHub when ready to implement.
+
 ### 1.3 Identify Key Pages
 
 Map the site architecture to identify:
