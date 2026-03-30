@@ -16,6 +16,25 @@ Before launching subagents, perform these discovery steps:
 
 Use `WebFetch` to retrieve the homepage and up to 5 key interior pages (pricing, about, product/features, blog, contact). Store raw content for subagent consumption.
 
+### 1.1b PageSpeed / Lighthouse scores (objective performance)
+
+Before subagent analysis, **run the PageSpeed CLI** against the same URL(s) you are auditing (at minimum the primary landing URL — homepage or the URL the user provided). This supplies real Lighthouse category scores and lab Core Web Vitals from Google PageSpeed Insights.
+
+**Command (from repo root, or from installed `~/.claude/skills/market/scripts/` after `./install.sh`):**
+
+```bash
+export PAGESPEED_API_KEY="your-google-api-key"   # recommended — enable PageSpeed Insights API in GCP
+python3 scripts/pagespeed_score.py "<url>" mobile
+python3 scripts/pagespeed_score.py "<url>" desktop
+```
+
+**Incorporate into the audit:**
+
+- Paste or summarize the JSON output in your working context for **market-technical** (SEO & Discoverability) and reference numeric scores in `MARKETING-AUDIT.md` under technical / Core Web Vitals.
+- Use `scores.performance`, `scores.accessibility`, `scores.best_practices`, `scores.seo` (0–100) and `core_web_vitals` (`lcp_ms`, `cls`, `inp_ms`, `cwv_overall_status`).
+- Surface top `opportunities` (estimated savings in ms) as prioritized technical quick wins.
+- If `error` is non-null (quota, unreachable URL, missing key), state that explicitly and continue the audit with qualitative speed assessment.
+
 ### 1.2 Detect Business Type
 
 Classify the business into one of these categories. This classification shapes every subagent's analysis focus:

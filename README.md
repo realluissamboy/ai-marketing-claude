@@ -54,6 +54,21 @@ cd ai-marketing-claude
 pip install reportlab
 ```
 
+### Optional: PageSpeed Insights (Lighthouse scores)
+
+`/market audit` can use **Google PageSpeed Insights API** for real Lighthouse category scores and lab Core Web Vitals.
+
+1. Create an API key in [Google Cloud Console](https://console.cloud.google.com/) and enable **PageSpeed Insights API**.
+2. Export the key and run (from repo root):
+
+```bash
+export PAGESPEED_API_KEY="your-api-key-here"
+python3 scripts/pagespeed_score.py https://example.com mobile
+python3 scripts/pagespeed_score.py https://example.com desktop
+```
+
+The CLI prints JSON with `scores` (performance, accessibility, best-practices, seo), `core_web_vitals`, `supporting_metrics`, `opportunities`, and optional CrUX `field_data`. On failure, an `error` object is included instead.
+
 ---
 
 ## Commands
@@ -111,7 +126,10 @@ ai-marketing-claude/
 │   ├── analyze_page.py                 # Webpage marketing analysis
 │   ├── competitor_scanner.py           # Competitor website scanner
 │   ├── social_calendar.py              # Social content calendar generator
-│   └── generate_pdf_report.py          # PDF report generator
+│   ├── generate_pdf_report.py          # PDF report generator
+│   ├── pagespeed_client.py             # PageSpeed Insights API client
+│   ├── pagespeed_normalize.py          # PSI → stable audit JSON schema
+│   └── pagespeed_score.py              # CLI: Lighthouse/PageSpeed scores
 │
 ├── templates/                          # Marketing templates
 │   ├── email-welcome.md                # Welcome email sequence (5 emails)
