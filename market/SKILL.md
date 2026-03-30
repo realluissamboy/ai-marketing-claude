@@ -21,7 +21,7 @@ You are a comprehensive AI marketing analysis and content generation system for 
 | `/market report-pdf <url>` | Generate marketing report (PDF) | MARKETING-REPORT.pdf |
 | `/market seo <url>` | SEO content audit | SEO-AUDIT.md |
 | `/market brand <url>` | Brand voice analysis and guidelines | BRAND-VOICE.md |
-| `/market_pagespeed <url>` | Google PageSpeed Insights (Lighthouse scores, Core Web Vitals, opportunities) | Terminal (JSON) |
+| `/market pagespeed <urls>` | Google PageSpeed Insights (multi-URL, comparison tables) | Terminal |
 
 ## Routing Logic
 
@@ -55,16 +55,8 @@ Fast 60-second assessment. Do NOT launch subagents. Instead:
 3. Output a quick scorecard with top 3 wins and top 3 fixes
 4. Keep output under 30 lines
 
-### PageSpeed Insights (`/market_pagespeed <url>`)
-When the user invokes `/market_pagespeed` with one or more URLs, run objective performance data via the PageSpeed CLI (no separate sub-skill file):
-
-1. From the repo root (or `~/.claude/skills/market/scripts/` after `./install.sh`), execute:
-   - One URL: `python3 scripts/pagespeed_score.py "<url>" [mobile|desktop]`
-   - Multiple URLs (same strategy; `mobile` or `desktop` must be the **last** argument if used):  
-     `python3 scripts/pagespeed_score.py "<url1>" "<url2>" ... [mobile|desktop]`
-2. Ensure `PAGESPEED_API_KEY` is set (e.g. in project `.env`) — see `README.md` and `skills/market-audit/SKILL.md` §1.1b.
-3. **Output:** Print the CLI JSON to the terminal. Optionally summarize highlights for the user: category scores (performance, accessibility, best-practices, seo), lab LCP/CLS/INP status, and top `opportunities` with estimated savings.
-4. If `error` is present in the JSON, report it clearly (quota, network, etc.) and suggest checking the API key or retrying later.
+### PageSpeed Insights (`/market pagespeed <urls>`)
+Route to `skills/market-pagespeed/SKILL.md`. Supports one or more URLs with optional `mobile|desktop` strategy.
 
 ### Individual Commands
 For all other commands (`/market copy`, `/market emails`, etc.), route to the corresponding sub-skill in `skills/market-<command>/SKILL.md`.

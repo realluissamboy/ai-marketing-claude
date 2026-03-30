@@ -87,6 +87,7 @@ SKILLS=(
     "market-report-pdf"
     "market-seo"
     "market-brand"
+    "market-pagespeed"
 )
 
 SKILL_COUNT=0
@@ -220,6 +221,7 @@ echo "  /market report <url>       Marketing report (Markdown)"
 echo "  /market report-pdf <url>   Marketing report (PDF)"
 echo "  /market seo <url>          SEO content audit"
 echo "  /market brand <url>        Brand voice analysis"
+echo "  /market pagespeed <urls>   PageSpeed Insights (multi-URL)"
 echo ""
 echo -e "  ${YELLOW}Start a new Claude Code session to use the skills.${NC}"
 echo ""
